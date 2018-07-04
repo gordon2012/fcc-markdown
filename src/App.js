@@ -2,37 +2,55 @@ import React, { Component } from 'react';
 import marked from 'marked';
 window.marked = marked;
 
+const renderer = new marked.Renderer();
+renderer.link = function(href, title, text) {
+  return `
+  <a href="${href}" target="_blank" rel="noreferrer noopener">${text}</a>
+  `;
+};
+
+marked.setOptions({
+  sanitize: true,
+  gfm: true,
+  breaks: true,
+  renderer: renderer
+});
+
 class App extends Component {
   state = {
-    input: [
-      `# A header
-## A subheader
-[Google](https://google.com)`,
+    input: `# This is an <h1> tag
 
-      'The `const` keyword is great.',
+## This is an <h2> tag
 
-      '\n```js' +
-        'for(int i = 0; i++ i < 10) {' +
-        'console.log(i);' +
-        '}' +
-        '```',
+**This text will be bold**
 
-      `- one
-- two
-- three
+You can even [link to Google!](http://google.com)
 
-> block
-> this.state = {loading = true};
-> quote
+* Item 1
+* Item 2
 
-![Dank](http://gordonscampinggear.com/img/portfolio.png)
+![My Portfolio](http://gordonscampinggear.com/img/portfolio.png)
 
-**BOLD!!**`
-    ].join('')
+As Kanye West said:
+
+> We're living the future so
+> the present is our past.
+
+I think you should use an \`<addr>\` element here instead
+
+\`\`\`javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+\`\`\``
   };
 
   getMarkdown(input) {
-    return { __html: marked(input, { sanitize: true }) };
+    return {
+      __html: marked(input)
+    };
   }
 
   setInput = e => {
