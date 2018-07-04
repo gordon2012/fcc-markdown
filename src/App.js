@@ -61,16 +61,18 @@ function fancyAlert(arg) {
     const { input } = this.state;
     return (
       <div className="App">
-        <textarea
-          name=""
-          id="editor"
-          cols="30"
-          rows="10"
-          onChange={this.setInput}
-          value={this.state.input}
-        />
+        <div className="wrap">
+          <textarea
+            name=""
+            id="editor"
+            cols="30"
+            rows="30"
+            onChange={this.setInput}
+            value={this.state.input}
+          />
 
-        <div id="preview" dangerouslySetInnerHTML={this.getMarkdown(input)} />
+          <div id="preview" dangerouslySetInnerHTML={this.getMarkdown(input)} />
+        </div>
       </div>
     );
   }
