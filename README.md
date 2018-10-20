@@ -8,4 +8,4 @@ A freeCodeCamp Front End Library project built with React, this website is a WYS
 
 ![Markdown Previewer](https://gordondoskas.com/markdown.png "Markdown Previewer")
 
-![Markdown Previewer](https://gordondoskas.com/markdown2.png "Markdown Previewer")
+
