@@ -2,6 +2,10 @@
 
 ### A freeCodeCamp Front End Libraries Project
 
-<https://markdown.gordonscampinggear.com>
+<https://markdown.gordondoskas.com>
 
-![Markdown Previewer](https://gordonscampinggear.com/img/markdown.png)
+A freeCodeCamp Front End Library project built with React, this website is a WYSIWYG markdown editor that displays a preview in real time.
+
+![Markdown Previewer](https://gordondoskas.com/markdown.png 'Markdown Previewer')
+
+![Markdown Previewer](https://gordondoskas.com/markdown2.png 'Markdown Previewer')
