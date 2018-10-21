@@ -29,7 +29,7 @@ You can even [link to Google!](http://google.com)
 * Item 1
 * Item 2
 
-![My Portfolio](http://gordonscampinggear.com/img/portfolio.png)
+![My Portfolio](https://gordondoskas.com/fcc-portfolio.png)
 
 As Kanye West said:
 
